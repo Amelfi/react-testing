@@ -1,16 +1,19 @@
 import { useState } from 'react'
 
 interface Props {
-  itemName: string
+  itemName: string,
+  quantity?: number
 }
-export const ItemCounter = ({itemName}: Props) => {
-  const [count, setCount] = useState(0)
+export const ItemCounter = ({itemName, quantity = 1}: Props) => {
+  const [count, setCount] = useState(quantity)
 
   const handleAdd = () => {
     setCount(count + 1);
   }
 
   const handleSubtraction = () => {
+    if(count == 0) return;
+
     setCount(count - 1);
   }
   return (

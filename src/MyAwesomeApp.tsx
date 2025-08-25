@@ -17,12 +17,12 @@ const styleData: CSSProperties = {
 export function MyAwesomeApp(){
 
     return(
-        <>
-            <h1>{firstName}</h1>
+        <div>
+            <h1 data-testid="first-name-title">{firstName}</h1>
             <h2 style={styleData}>{lastName}</h2>
             <p>{isActive ? 'Activo': 'Inactivo'}</p>
-            <p>{arrayData.join(', ')}</p>
+            <p className="mi-clase-con-juegos">{arrayData.join(', ')}</p>
             <p>{JSON.stringify(objectData)}</p>
-        </>
+        </div>
     )
 }

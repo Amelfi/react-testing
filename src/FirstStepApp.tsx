@@ -1,17 +1,21 @@
 import { ItemCounter } from "./shopping-cart/ItemCounter";
 
 interface items{
-    name: string
+    name: string,
+    quantity: number
 }
 const itemsList: items[] = [
     {
-        name: "Nintendo Switch Oled"
+        name: "Nintendo Switch Oled",
+        quantity: 3
     },
     {
-        name: "Super Mario Odysse"
+        name: "Super Mario Odysse",
+        quantity: 2
     },
     {
-        name: "Super Smash Bros"
+        name: "Super Smash Bros",
+        quantity: 6
     },
 ]
 
@@ -19,8 +23,8 @@ export function FirstStepApp(){
  return (
     <>
         <h1>Carrito de compras</h1>
-        {itemsList.map(({name})=>(
-            <ItemCounter itemName={name}/>
+        {itemsList.map((item)=>(
+            <ItemCounter itemName={item.name} quantity={item.quantity}/>
         ))}
         
     </>

@@ -1,0 +1,29 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MyAwesomeApp > Should match snapshot 1`] = `
+<div>
+  <div>
+    <h1
+      data-testid="first-name-title"
+    >
+      Adan
+    </h1>
+    <h2
+      style="background-color: red; border-radius: 10px;"
+    >
+      Santana
+    </h2>
+    <p>
+      Activo
+    </p>
+    <p
+      class="mi-clase-con-juegos"
+    >
+      Mario, Luffy, Warrio
+    </p>
+    <p>
+      {"key":"123ABC","articleName":"Carro"}
+    </p>
+  </div>
+</div>
+`;
