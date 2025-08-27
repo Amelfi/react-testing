@@ -56,6 +56,15 @@ describe('Multiply', () =>{
         //! 3 Assert
         expect(result).toBe(a * b);
     });
+
+    test('Should divide two numbers', () => {
+        const a = 3;
+        const b = 2;
+
+        const result = divide(a, b);
+
+        expect(result).toBe(a / b);
+    })
 })
 
 

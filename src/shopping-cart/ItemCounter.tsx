@@ -1,10 +1,10 @@
 import { useState } from 'react'
 
 interface Props {
-  itemName: string,
+  name: string,
   quantity?: number
 }
-export const ItemCounter = ({itemName, quantity = 1}: Props) => {
+export const ItemCounter = ({name, quantity = 1}: Props) => {
   const [count, setCount] = useState(quantity)
 
   const handleAdd = () => {
@@ -26,7 +26,7 @@ export const ItemCounter = ({itemName, quantity = 1}: Props) => {
           alignItems: 'center'
         }
       }>
-        <p style={{marginRight: '2px', marginLeft:'2px'}}> {itemName} </p>
+        <p style={{marginRight: '2px', marginLeft:'2px', color: count === 1 ? 'red' : 'black'}}> {name} </p>
         <button onClick={handleSubtraction}>-</button>
         <p>{count}</p>
         <button onClick={handleAdd}>+</button>

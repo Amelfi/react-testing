@@ -24,7 +24,7 @@ export function FirstStepApp(){
     <>
         <h1>Carrito de compras</h1>
         {itemsList.map((item)=>(
-            <ItemCounter itemName={item.name} quantity={item.quantity}/>
+            <ItemCounter key={item.name} name={item.name} quantity={item.quantity}/>
         ))}
         
     </>
